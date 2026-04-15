@@ -3,787 +3,289 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>今天多一天，明天多一分｜聽力練習第四回</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:wght@700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>今天多一題，明天多一分｜英語聽力練習</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #1a1209;
-    --parchment: #fdf6e8;
-    --gold: #c8973a;
-    --gold-light: #e8c678;
-    --gold-pale: #f7edd4;
-    --crimson: #8b1a1a;
-    --sage: #3d5a47;
-    --shadow: rgba(26,18,9,0.12);
-    --border: #d4b87a;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background-color: #f0e8d4;
-    background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(200,151,58,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.05) 0%, transparent 60%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8973a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    min-height: 100vh;
-    font-family: 'Noto Sans TC', sans-serif;
-    color: var(--ink);
-  }
-
-  .page-frame {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 40px 20px 60px;
-  }
-
-  /* HEADER */
-  .site-header {
-    text-align: center;
-    padding: 50px 30px 40px;
-    position: relative;
-    margin-bottom: 10px;
-  }
-
-  .header-ornament {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    margin-bottom: 24px;
-  }
-
-  .ornament-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    max-width: 120px;
-  }
-
-  .ornament-diamond {
-    width: 10px; height: 10px;
-    background: var(--gold);
-    transform: rotate(45deg);
-    flex-shrink: 0;
-  }
-
-  .site-title {
-    font-family: 'Playfair Display', 'Noto Serif TC', serif;
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    font-weight: 900;
-    color: var(--ink);
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .site-title span {
-    color: var(--gold);
-  }
-
-  .site-subtitle {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 1.05rem;
-    color: var(--crimson);
-    letter-spacing: 0.25em;
-    font-weight: 600;
-    margin-top: 6px;
-  }
-
-  /* MAIN CARD */
-  .main-card {
-    background: var(--parchment);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    box-shadow: 0 8px 40px var(--shadow), 0 2px 8px rgba(200,151,58,0.1);
-    overflow: hidden;
-    position: relative;
-  }
-
-  .main-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--crimson), var(--gold), var(--sage), var(--gold), var(--crimson));
-  }
-
-  .card-inner { padding: 48px 52px 52px; }
-
-  @media (max-width: 600px) {
-    .card-inner { padding: 32px 24px 36px; }
-  }
-
-  /* STEP SECTIONS */
-  .step-section {
-    margin-bottom: 36px;
-  }
-
-  .step-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-
-  .step-number {
-    width: 32px; height: 32px;
-    background: var(--ink);
-    color: var(--gold-light);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
-  .step-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #6b5122;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 34px 0;
-    opacity: 0.6;
-  }
-
-  /* BUTTONS */
-  .btn-main {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #2a1f0e 0%, #3d2e10 100%);
-    color: var(--gold-light);
-    border: 1px solid var(--gold);
-    border-radius: 3px;
-    padding: 14px 32px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    text-decoration: none;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,220,120,0.15);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-main::after {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,220,120,0.08), transparent);
-    transition: left 0.4s ease;
-  }
-
-  .btn-main:hover::after { left: 100%; }
-  .btn-main:hover {
-    background: linear-gradient(135deg, #3d2e10 0%, #5a4218 100%);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3), 0 0 0 1px var(--gold-light);
-    transform: translateY(-1px);
-  }
-  .btn-main:active { transform: translateY(0); }
-
-  .btn-icon { font-size: 1.2rem; }
-
-  /* AUDIO PLAYER */
-  .audio-wrapper {
-    display: none;
-    margin-top: 24px;
-    animation: fadeSlideIn 0.4s ease;
-  }
-  .audio-wrapper.visible { display: block; }
-
-  .audio-label {
-    font-size: 0.8rem;
-    color: #7a6240;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-family: 'Noto Serif TC', serif;
-  }
-
-  audio {
-    width: 100%;
-    border-radius: 3px;
-    accent-color: var(--gold);
-    height: 44px;
-  }
-
-  /* ANSWERS GRID */
-  .answers-wrapper {
-    display: none;
-    margin-top: 24px;
-    animation: fadeSlideIn 0.4s ease;
-  }
-  .answers-wrapper.visible { display: block; }
-
-  .answers-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.9rem;
-    color: var(--crimson);
-    letter-spacing: 0.2em;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
-
-  .answers-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-
-  .answer-cell {
-    background: var(--parchment);
-    padding: 14px 8px;
-    text-align: center;
-    transition: background 0.2s;
-  }
-
-  .answer-cell:hover { background: var(--gold-pale); }
-
-  .answer-num {
-    font-size: 0.72rem;
-    color: #9a8060;
-    font-family: 'Noto Serif TC', serif;
-    margin-bottom: 4px;
-    letter-spacing: 0.05em;
-  }
-
-  .answer-val {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--crimson);
-  }
-
-  /* ANALYSIS SECTION */
-  .analysis-wrapper {
-    display: none;
-    margin-top: 24px;
-    animation: fadeSlideIn 0.4s ease;
-  }
-  .analysis-wrapper.visible { display: block; }
-
-  .query-box {
-    background: var(--gold-pale);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: 28px 28px 24px;
-  }
-
-  .query-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: 0.1em;
-    margin-bottom: 6px;
-  }
-
-  .query-hint {
-    font-size: 0.8rem;
-    color: #7a6240;
-    margin-bottom: 18px;
-    line-height: 1.5;
-  }
-
-  .query-hint strong { color: var(--crimson); }
-
-  .query-input-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .query-input {
-    flex: 1;
-    min-width: 200px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: 11px 16px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.95rem;
-    background: var(--parchment);
-    color: var(--ink);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  .query-input:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(200,151,58,0.15); }
-
-  .btn-query {
-    background: var(--crimson);
-    color: #fdf0e0;
-    border: none;
-    border-radius: 3px;
-    padding: 11px 24px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.08em;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .btn-query:hover { background: #6e1414; transform: translateY(-1px); }
-
-  .error-msg {
-    display: none;
-    margin-top: 10px;
-    color: var(--crimson);
-    font-size: 0.83rem;
-    font-family: 'Noto Serif TC', serif;
-  }
-
-  /* RESULT CARDS */
-  .results-area {
-    display: none;
-    margin-top: 28px;
-    animation: fadeSlideIn 0.4s ease;
-  }
-  .results-area.visible { display: block; }
-
-  .result-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--gold);
-    border-radius: 3px;
-    padding: 22px 24px;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 8px var(--shadow);
-  }
-
-  .result-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .result-num-badge {
-    background: var(--ink);
-    color: var(--gold-light);
-    font-family: 'Playfair Display', serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 2px;
-    letter-spacing: 0.05em;
-  }
-
-  .result-answer-badge {
-    background: var(--crimson);
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 3px 14px;
-    border-radius: 2px;
-  }
-
-  .result-script-label {
-    font-size: 0.75rem;
-    color: #7a6240;
-    letter-spacing: 0.15em;
-    font-family: 'Noto Serif TC', serif;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .result-script {
-    font-size: 0.9rem;
-    line-height: 1.85;
-    color: #2a1f0e;
-    white-space: pre-line;
-    font-family: 'Noto Sans TC', sans-serif;
-  }
-
-  /* RESET BUTTON */
-  .btn-reset {
-    display: none;
-    margin-top: 22px;
-    background: transparent;
-    color: var(--sage);
-    border: 1px solid var(--sage);
-    border-radius: 3px;
-    padding: 11px 28px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.08em;
-    transition: all 0.2s;
-  }
-  .btn-reset.visible { display: inline-flex; align-items: center; gap: 8px; }
-  .btn-reset:hover { background: var(--sage); color: white; transform: translateY(-1px); }
-
-  /* FOOTER MOTTO */
-  .footer-motto {
-    text-align: center;
-    margin-top: 50px;
-    padding: 36px 30px;
-    position: relative;
-  }
-
-  .footer-motto::before, .footer-motto::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    margin: 0 auto;
-  }
-
-  .footer-motto::before { margin-bottom: 22px; }
-  .footer-motto::after { margin-top: 22px; }
-
-  .motto-en {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-    font-style: italic;
-  }
-
-  .motto-zh {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.9rem;
-    color: #7a6240;
-    letter-spacing: 0.18em;
-    font-weight: 400;
-  }
-
-  @keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+:root{--ink:#1a1209;--parchment:#fdf6e8;--gold:#c8973a;--gold-light:#e8c678;--gold-pale:#f7edd4;--crimson:#8b1a1a;--sage:#3d5a47;--shadow:rgba(26,18,9,0.12);--border:#d4b87a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background-color:#f0e8d4;background-image:radial-gradient(ellipse at 20% 10%,rgba(200,151,58,.08) 0%,transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(139,26,26,.05) 0%,transparent 60%),url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8973a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");min-height:100vh;font-family:'Noto Sans TC',sans-serif;color:var(--ink);}
+.page-frame{max-width:880px;margin:0 auto;padding:40px 20px 60px;}
+.site-header{text-align:center;padding:48px 30px 34px;}
+.header-ornament{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:20px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);max-width:120px;}
+.ornament-diamond{width:10px;height:10px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+.site-title{font-family:'Playfair Display','Noto Serif TC',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;color:var(--ink);letter-spacing:.02em;line-height:1.2;margin-bottom:8px;}
+.site-title span{color:var(--gold);}
+.site-subtitle{font-family:'Noto Serif TC',serif;font-size:1rem;color:var(--crimson);letter-spacing:.25em;font-weight:600;}
+.selector-card{background:var(--parchment);border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 40px var(--shadow),0 2px 8px rgba(200,151,58,.1);overflow:hidden;position:relative;margin-bottom:28px;}
+.selector-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--crimson),var(--gold),var(--sage),var(--gold),var(--crimson));}
+.selector-inner{padding:40px 48px 44px;}
+@media(max-width:600px){.selector-inner{padding:28px 20px 32px;}}
+.selector-title{font-family:'Noto Serif TC',serif;font-size:.85rem;font-weight:700;color:#6b5122;letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;}
+.units-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px;}
+.unit-card{background:var(--gold-pale);border:1px solid var(--border);border-radius:3px;padding:20px 14px;text-align:center;cursor:pointer;transition:all .22s ease;position:relative;overflow:hidden;}
+.unit-card::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(200,151,58,.12),transparent);transition:left .4s;}
+.unit-card:hover::after{left:100%;}
+.unit-card:hover{background:#f0deb0;border-color:var(--gold);box-shadow:0 4px 16px rgba(200,151,58,.2);transform:translateY(-2px);}
+.unit-card.active{background:var(--ink);border-color:var(--ink);}
+.unit-card.active .unit-num{color:var(--gold-light);}
+.unit-card.active .unit-name{color:var(--gold-pale);}
+.unit-card.active .unit-badge{color:var(--gold-light);border-color:var(--gold-light);}
+.unit-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:5px;}
+.unit-name{font-family:'Noto Serif TC',serif;font-size:.8rem;color:#6b5122;letter-spacing:.1em;font-weight:600;}
+.unit-badge{display:inline-block;margin-top:7px;font-size:.68rem;color:var(--sage);border:1px solid var(--sage);border-radius:2px;padding:2px 8px;letter-spacing:.06em;}
+.practice-card{background:var(--parchment);border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 40px var(--shadow);overflow:hidden;position:relative;display:none;animation:fadeSlideIn .35s ease;}
+.practice-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--crimson),var(--gold),var(--sage),var(--gold),var(--crimson));}
+.practice-inner{padding:44px 48px 48px;}
+@media(max-width:600px){.practice-inner{padding:28px 20px 32px;}}
+.practice-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:34px;flex-wrap:wrap;gap:12px;}
+.practice-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--ink);}
+.practice-title span{color:var(--crimson);}
+.btn-back{background:transparent;border:1px solid var(--border);border-radius:3px;padding:8px 18px;font-family:'Noto Sans TC',sans-serif;font-size:.82rem;color:#7a6240;cursor:pointer;transition:all .2s;letter-spacing:.08em;}
+.btn-back:hover{border-color:var(--gold);color:var(--ink);}
+.step-section{margin-bottom:30px;}
+.step-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;}
+.step-number{width:30px;height:30px;background:var(--ink);color:var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;flex-shrink:0;}
+.step-title{font-family:'Noto Serif TC',serif;font-size:.82rem;font-weight:700;color:#6b5122;letter-spacing:.15em;text-transform:uppercase;}
+.divider{border:none;border-top:1px solid var(--border);margin:26px 0;opacity:.6;}
+.btn-main{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#2a1f0e,#3d2e10);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:13px 28px;font-family:'Noto Sans TC',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.1em;cursor:pointer;transition:all .25s;box-shadow:0 3px 12px rgba(0,0,0,.25);position:relative;overflow:hidden;}
+.btn-main::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,220,120,.08),transparent);transition:left .4s;}
+.btn-main:hover::after{left:100%;}
+.btn-main:hover{background:linear-gradient(135deg,#3d2e10,#5a4218);box-shadow:0 5px 20px rgba(0,0,0,.3),0 0 0 1px var(--gold-light);transform:translateY(-1px);}
+.audio-wrapper{display:none;margin-top:18px;animation:fadeSlideIn .4s ease;}
+.audio-wrapper.visible{display:block;}
+.audio-label{font-size:.75rem;color:#7a6240;letter-spacing:.15em;text-transform:uppercase;margin-bottom:7px;font-family:'Noto Serif TC',serif;}
+audio{width:100%;height:44px;accent-color:var(--gold);}
+.answers-wrapper{display:none;margin-top:18px;animation:fadeSlideIn .4s ease;}
+.answers-wrapper.visible{display:block;}
+.answers-title{font-family:'Noto Serif TC',serif;font-size:.85rem;color:var(--crimson);letter-spacing:.2em;margin-bottom:14px;font-weight:700;}
+.answers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+.answer-cell{background:var(--parchment);padding:11px 6px;text-align:center;transition:background .2s;}
+.answer-cell:hover{background:var(--gold-pale);}
+.answer-num{font-size:.68rem;color:#9a8060;font-family:'Noto Serif TC',serif;margin-bottom:3px;}
+.answer-val{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--crimson);}
+.analysis-wrapper{display:none;margin-top:18px;animation:fadeSlideIn .4s ease;}
+.analysis-wrapper.visible{display:block;}
+.query-box{background:var(--gold-pale);border:1px solid var(--border);border-radius:3px;padding:22px 22px 18px;}
+.query-title{font-family:'Noto Serif TC',serif;font-size:.88rem;font-weight:700;color:var(--ink);letter-spacing:.1em;margin-bottom:5px;}
+.query-hint{font-size:.77rem;color:#7a6240;margin-bottom:14px;line-height:1.5;}
+.query-hint strong{color:var(--crimson);}
+.query-input-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;}
+.query-input{flex:1;min-width:180px;border:1px solid var(--border);border-radius:3px;padding:10px 14px;font-family:'Noto Sans TC',sans-serif;font-size:.9rem;background:var(--parchment);color:var(--ink);outline:none;transition:border-color .2s;}
+.query-input:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(200,151,58,.15);}
+.btn-query{background:var(--crimson);color:#fdf0e0;border:none;border-radius:3px;padding:10px 22px;font-family:'Noto Sans TC',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;letter-spacing:.08em;transition:all .2s;white-space:nowrap;}
+.btn-query:hover{background:#6e1414;transform:translateY(-1px);}
+.error-msg{display:none;margin-top:8px;color:var(--crimson);font-size:.78rem;font-family:'Noto Serif TC',serif;}
+.results-area{display:none;margin-top:22px;animation:fadeSlideIn .4s ease;}
+.results-area.visible{display:block;}
+.result-card{background:white;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:3px;padding:18px 20px;margin-bottom:11px;box-shadow:0 2px 8px var(--shadow);}
+.result-header{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
+.result-num-badge{background:var(--ink);color:var(--gold-light);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:2px;}
+.result-answer-badge{background:var(--crimson);color:white;font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;padding:3px 14px;border-radius:2px;}
+.result-script-label{font-size:.7rem;color:#7a6240;letter-spacing:.15em;font-family:'Noto Serif TC',serif;text-transform:uppercase;margin-bottom:5px;}
+.result-script{font-size:.87rem;line-height:1.9;color:#2a1f0e;white-space:pre-line;}
+.btn-reset{display:none;margin-top:16px;background:transparent;color:var(--sage);border:1px solid var(--sage);border-radius:3px;padding:10px 24px;font-family:'Noto Sans TC',sans-serif;font-size:.87rem;font-weight:700;cursor:pointer;letter-spacing:.08em;transition:all .2s;}
+.btn-reset.visible{display:inline-flex;align-items:center;gap:8px;}
+.btn-reset:hover{background:var(--sage);color:white;transform:translateY(-1px);}
+.footer-motto{text-align:center;margin-top:44px;padding:28px;}
+.footer-motto::before,.footer-motto::after{content:'';display:block;width:50px;height:1px;background:var(--gold);margin:0 auto;}
+.footer-motto::before{margin-bottom:18px;}
+.footer-motto::after{margin-top:18px;}
+.motto-en{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold);font-style:italic;margin-bottom:6px;}
+.motto-zh{font-family:'Noto Serif TC',serif;font-size:.86rem;color:#7a6240;letter-spacing:.18em;}
+@keyframes fadeSlideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
-
 <div class="page-frame">
+<header class="site-header">
+  <div class="header-ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line"></div></div>
+  <h1 class="site-title">今天多一題，<span>明天多一分</span></h1>
+  <p class="site-subtitle">英語聽力練習</p>
+  <div class="header-ornament" style="margin-top:18px;margin-bottom:0"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line"></div></div>
+</header>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-ornament">
-      <div class="ornament-line"></div>
-      <div class="ornament-diamond"></div>
-      <div class="ornament-line"></div>
+<div class="selector-card" id="selectorCard">
+  <div class="selector-inner">
+    <p class="selector-title">▎ 選擇練習單元</p>
+    <div class="units-grid" id="unitsGrid"></div>
+  </div>
+</div>
+
+<div class="practice-card" id="practiceCard">
+  <div class="practice-inner">
+    <div class="practice-heading">
+      <div class="practice-title">聽力練習 ▸ <span id="practiceUnitTitle"></span></div>
+      <button class="btn-back" onclick="goBack()">← 返回選擇</button>
     </div>
-    <h1 class="site-title">今天多一天，<span>明天多一分</span></h1>
-    <p class="site-subtitle">聽力練習　第四回</p>
-    <div class="header-ornament" style="margin-top:22px;margin-bottom:0">
-      <div class="ornament-line"></div>
-      <div class="ornament-diamond"></div>
-      <div class="ornament-line"></div>
+    <div class="step-section">
+      <div class="step-label"><div class="step-number">一</div><div class="step-title">播放聽力</div></div>
+      <button class="btn-main" onclick="toggleAudio()"><span>🎧</span><span id="audioBtnText">點我聽聽力</span></button>
+      <div class="audio-wrapper" id="audioWrapper"><p class="audio-label">▶ 聽力音檔</p><audio id="audioPlayer" controls></audio></div>
     </div>
-  </header>
-
-  <!-- MAIN CARD -->
-  <div class="main-card">
-    <div class="card-inner">
-
-      <!-- STEP 1 -->
-      <div class="step-section">
-        <div class="step-label">
-          <div class="step-number">一</div>
-          <div class="step-title">播放聽力</div>
-        </div>
-
-        <button class="btn-main" onclick="toggleAudio()">
-          <span class="btn-icon">🎧</span>
-          <span id="audioBtn">點我聽聽力</span>
-        </button>
-
-        <div class="audio-wrapper" id="audioWrapper">
-          <p class="audio-label">▶ 聽力音檔 — 第四回</p>
-          <audio id="audioPlayer" controls>
-            <source src="仿會考聽力試卷-第四回聽力檔 (1).mp3" type="audio/mpeg">
-            您的瀏覽器不支援音訊播放，請更新瀏覽器。
-          </audio>
-        </div>
-      </div>
-
-      <hr class="divider">
-
-      <!-- STEP 2 -->
-      <div class="step-section">
-        <div class="step-label">
-          <div class="step-number">二</div>
-          <div class="step-title">對答案</div>
-        </div>
-
-        <button class="btn-main" onclick="showAnswers()">
-          <span class="btn-icon">✅</span>
-          <span>點我對答案</span>
-        </button>
-
-        <div class="answers-wrapper" id="answersWrapper">
-          <p class="answers-title">▎ 第四回答案</p>
-          <div class="answers-grid" id="answersGrid"></div>
-        </div>
-      </div>
-
-      <hr class="divider">
-
-      <!-- STEP 3 -->
-      <div class="step-section">
-        <div class="step-label">
-          <div class="step-number">三</div>
-          <div class="step-title">看解析</div>
-        </div>
-
-        <button class="btn-main" onclick="showAnalysis()">
-          <span class="btn-icon">📖</span>
-          <span>點我看解析</span>
-        </button>
-
-        <div class="analysis-wrapper" id="analysisWrapper">
-          <div class="query-box">
-            <p class="query-title">查詢題目解析</p>
-            <p class="query-hint">
-              請輸入題號（1–21），以逗號分隔，例如：<strong>3, 7, 15</strong><br>
-              一次最多查詢 <strong>5 題</strong>
-            </p>
-            <div class="query-input-row">
-              <input type="text" class="query-input" id="queryInput" placeholder="輸入題號，如 1, 5, 10" />
-              <button class="btn-query" onclick="lookupAnalysis()">查詢解析</button>
-            </div>
-            <p class="error-msg" id="errorMsg"></p>
+    <hr class="divider">
+    <div class="step-section">
+      <div class="step-label"><div class="step-number">二</div><div class="step-title">對答案</div></div>
+      <button class="btn-main" onclick="showAnswers()"><span>✅</span><span>點我對答案</span></button>
+      <div class="answers-wrapper" id="answersWrapper"><p class="answers-title" id="answersTitle"></p><div class="answers-grid" id="answersGrid"></div></div>
+    </div>
+    <hr class="divider">
+    <div class="step-section">
+      <div class="step-label"><div class="step-number">三</div><div class="step-title">看解析</div></div>
+      <button class="btn-main" onclick="showAnalysis()"><span>📖</span><span>點我看解析</span></button>
+      <div class="analysis-wrapper" id="analysisWrapper">
+        <div class="query-box">
+          <p class="query-title">查詢題目解析</p>
+          <p class="query-hint">請輸入題號，以逗號分隔，例如：<strong>3, 7, 15</strong><br>一次最多查詢 <strong>5 題</strong></p>
+          <div class="query-input-row">
+            <input type="text" class="query-input" id="queryInput" placeholder="輸入題號，如 1, 5, 10"/>
+            <button class="btn-query" onclick="lookupAnalysis()">查詢解析</button>
           </div>
-
-          <div class="results-area" id="resultsArea"></div>
-
-          <button class="btn-reset" id="resetBtn" onclick="resetQuery()">
-            ↩ 重新查詢
-          </button>
+          <p class="error-msg" id="errorMsg"></p>
         </div>
+        <div class="results-area" id="resultsArea"></div>
+        <button class="btn-reset" id="resetBtn" onclick="resetQuery()">↩ 重新查詢</button>
       </div>
+    </div>
+  </div>
+</div>
 
-    </div><!-- /card-inner -->
-  </div><!-- /main-card -->
-
-  <!-- FOOTER -->
-  <footer class="footer-motto">
-    <p class="motto-en">Greater effort leads to greater rewards.</p>
-    <p class="motto-zh">你有多努力，成果就有多豐碩。</p>
-  </footer>
-
-</div><!-- /page-frame -->
+<footer class="footer-motto">
+  <p class="motto-en">Greater effort leads to greater rewards.</p>
+  <p class="motto-zh">你有多努力，成果就有多豐碩。</p>
+</footer>
+</div>
 
 <script>
-const answers = {
-  1:'C',2:'C',3:'B',4:'B',5:'B',
-  6:'A',7:'B',8:'A',9:'C',10:'C',
-  11:'A',12:'B',13:'B',14:'A',15:'C',
-  16:'B',17:'A',18:'C',19:'C',20:'A',21:'B'
-};
+const UNITS=[
+  {id:1,label:'第一回',audioFile:'listening1.mp3',totalQ:21,
+   answers:{1:'A',2:'A',3:'B',4:'C',5:'A',6:'B',7:'C',8:'B',9:'A',10:'A',11:'B',12:'C',13:'A',14:'B',15:'C',16:'C',17:'B',18:'A',19:'B',20:'C',21:'A'},
+   scripts:{1:"Little ducks swim in a row behind their mother.",2:"There is a hamburger on the man's left.",3:"The dish which my brother made was eaten up.",4:"Kevin put the book back into my drawer, didn't he?",5:"Dad has never been to a foreign country.",6:"Terry wants to know what will happen when he stops doing his job.",7:"How much did you spend on the sweater?",8:"It looks like rain.",9:"Does William study harder than anyone else in his class?",10:"I lost Lisa's notebook. Tell me what I should do.",11:"Ryan fixed the fan.",12:"M: How can I get better grades in English?\nW: Why don't you take some courses online?\nM: I heard they're expensive.\nW: Don't worry. There are some free classes on the Net, and you can try them.\nQuestion: What may the man do next?",13:"W: The kids are studying at home because of COVID-19, and I am so busy taking care of them.\nM: Yeah. I'm going to be crazy about that, too.\nW: I hope they can go back to school soon.\nM: Their teachers are so nice that they can stand whatever the kids do.\nQuestion: What are the woman and the man talking about?",14:"W: Look at that long line. What are the people there doing?\nM: They're in line for the expensive basketball shoes.\nW: What for?\nM: Some just want to have them. Others want to sell them on at a higher price.\nW: I don't understand why they spend so much time doing this.\nM: If you were a basketball fan, you'd get it.\nQuestion: Which is true about the talk?",15:"M: Look at the sign outside this restaurant. It says \"NO PETS ALLOWED.\" Don't you think that's not friendly to pets?\nW: No, I don't think so. I like to eat in a clean space without animals.\nM: Everyone likes to play with cute animals!\nW: Not me.\nQuestion: What can we know about the woman?",16:"W: Hi, Benson. How has the weather been in your city?\nM: Terrible. It has rained for a week.\nW: Will the rain stop your trip tomorrow?\nM: No. We'll fly to the island tomorrow, and the weather there is lovely.\nW: When are you coming back?\nM: The day after tomorrow, and I hope when we come back home, the weather will be good.\nQuestion: When did the rain start in Benson's city?",17:"W: Larry, when is your trip to the zoo?\nBoy: Tomorrow morning.\nW: How many students in your class will go with Mrs. Miller?\nBoy: Everyone except John; the other nine kids will go on the trip.\nW: What's wrong with John?\nBoy: He's sick in the hospital.\nQuestion: What can we learn from the dialogue?",18:"W: In early August 2023, serious fires happened in Hawaii. Because of the hot dry weather and strong winds, the big fires covered a lot of land and lasted for a few days. 115 people were killed and 385 people are still missing. Also, a lot of buildings were burned down, and it will cost a lot to rebuild everything.\nQuestion: What is true about the fires in Hawaii?",19:"M: Did you get the skirt you ordered online?\nW: No. It hasn't arrived yet.\nM: What are you going to do?\nW: I called the shopkeeper to make sure whether he sent it.\nM: What did he say?\nW: I can get a refund if I don't get the skirt in two days.\nQuestion: What does the woman mean by \"refund\"?",20:"W: I have tickets to the concert this Friday. Do you want to go?\nM: I'm not sure. I don't like loud music.\nW: Don't worry. Their music makes people feel comfortable.\nM: Sounds like a good idea. What time is the concert?\nW: At 8:00. We can have dinner before it starts.\nM: No problem. I'll treat you to dinner as thanks.\nQuestion: What can we say about the woman?",21:"W: Hello, I'm calling about the coffee machine I just bought 3 days ago. It stopped working.\nM: I'm sorry to hear that. May I have your name, please?\nW: Wilson. Nina Wilson.\nM: OK. Ms. Wilson. Sorry again about the coffee machine. Could you send the machine back? If so, we can send you a new one and give 20% of the money back to you.\nW: That sounds good, and I'll do that.\nM: Thank you, Ms. Wilson.\nQuestion: What may happen next?"}},
+  {id:2,label:'第二回',audioFile:'listening2.mp3',totalQ:21,
+   answers:{1:'C',2:'A',3:'B',4:'C',5:'B',6:'A',7:'A',8:'B',9:'C',10:'C',11:'A',12:'B',13:'B',14:'A',15:'C',16:'B',17:'C',18:'A',19:'A',20:'B',21:'C'},
+   scripts:{1:"There are three round cookies on the plate.",2:"Turn right on Park Road, and you will see the bookstore on your left.",3:"The group of boys ate the food hungrily.",4:"Besides John, who else will also go to the movie this weekend?",5:"The police didn't believe what the teenagers said.",6:"Dad is always so serious about everything, isn't he?",7:"There are enough eggs on the market, but the price for them is still high.",8:"Weather around the world is getting hotter and hotter.",9:"What do you want to get for your mom on Mother's Day?",10:"Excuse me. How long will it take to climb to the top?",11:"Justin is too shy to talk about anything with us.",12:"M: Honey, what are you looking for? We've been in the shop for an hour.\nW: I'm looking for a skirt with big dots.\nM: Why don't you choose this white one with black dots.\nW: The dots are too small.\nM: Don't worry. The circles will get bigger after you wear it.\nQuestion: What does the man mean by \"the circles will get bigger…\"?",13:"W: Ted, I got a call from your teacher today.\nM: Really? What did my teacher say?\nW: Why don't you tell me what you did at school? Don't lie to me.\nM: All right. I cheated in math class.\nW: Why did you do that?\nM: I didn't prepare for it. Mom, I'm sorry and I won't do it again.\nQuestion: Why did Ted's teacher call his mom?",14:"W: Hello. I want to book a table for four this Saturday night.\nM: Sorry, ma'am. We're fully booked that night. How about this Saturday at noon?\nW: That's OK. It's better than nothing.\nM: May I have your last name, please?\nW: Wilson.\nM: OK, Ms. Wilson. We will hold the table until 12:10. See you this Saturday.\nQuestion: What is true about the man?",15:"M: Janet, what are you doing? You look so busy.\nW: I'm looking for a dress for the party tonight.\nM: Don't you have several in your clothes drawer?\nW: Yes, but I can't decide which one is the best.\nM: Just pick one first, and I can give you my idea.\nW: All right.\nQuestion: What is the woman doing now?",16:"W: Josh, I heard you got a new job.\nM: Yeah. I was so lucky to get one so soon.\nW: When do you start?\nM: I need to do some training for two weeks and then I'll get started after that.\nW: Good luck and do your best.\nM: I will.\nQuestion: What will the man do first?",17:"M: Mom, why do you always ask for bags from the shopkeepers?\nW: It's convenient, and that way, I don't need to prepare my own bags.\nM: But, Mom, too many bags are bad for the Earth.\nW: I know that, but I always forget to bring my own.\nM: That's easy. Next time, I'll tell you to bring one before you go shopping.\nW: Thank you, son.\nQuestion: What's wrong with the woman?",18:"W: Louis, I'm very worried about Grandpa's strange actions.\nM: Really? I didn't notice that. Can you tell me more?\nW: He doesn't know me sometimes, and keeps asking me where he is.\nM: That sounds serious, but what can we do?\nW: How about taking him to the hospital soon?\nM: OK. That would be a good idea.\nQuestion: What are the man and the woman going to do?",19:"M: I think we can take a trip for the New Year holiday.\nW: I'd be glad to do that. Where do you want to go?\nM: How about Taitung?\nW: What's so special about Taitung?\nM: We can watch the sun rise on the first day of the year there.\nW: Wow! That sounds so interesting.\nQuestion: What can we learn from the dialogue?",20:"M: Many people like to eat at all-you-can-eat restaurants. There, you can eat many kinds of foods for one set price, and keep eating until you feel very full. The restaurants use some tricks to make money. First, they use smaller plates and bowls. Second, they provide a lot of cheaper foods, which are put in the front of the more expensive foods. Last, they don't serve expensive foods, such as steak or fish, very often.\nQuestion: Which of the following is NOT a trick all-you-can-eat restaurants use to make money?",21:"W: What's this?\nM: Happy birthday, Mom. Open it.\nW: Wow, two hot spring tickets at a famous hotel. I really love this gift.\nM: By the way, Lisa got you a rice cooker. Here it is.\nW: How sweet she is! Remember to thank her for me.\nM: I will, Mom.\nQuestion: What can we learn from the dialogue?"}},
+  {id:3,label:'第三回',audioFile:'listening3.mp3',totalQ:21,
+   answers:{1:'A',2:'B',3:'A',4:'A',5:'B',6:'C',7:'C',8:'A',9:'C',10:'A',11:'B',12:'C',13:'C',14:'A',15:'B',16:'B',17:'A',18:'C',19:'C',20:'B',21:'A'},
+   scripts:{1:"Mr. Wilson is waiting for a bus in front of the hospital.",2:"Let's pick up the trash on the beach.",3:"Mr. Beans is riding a bike from north to south.",4:"I couldn't find you at home earlier. How long have you been home?",5:"It appears it will rain this afternoon. Did you bring an umbrella?",6:"Ms. Lee was so angry at me that she couldn't say a word.",7:"What is taking Allen so long? He should be here by now.",8:"The pants that Johnny is wearing are so cool.",9:"Hello, I'm Tom. May I take your order?",10:"Jeff, stop playing games on your cellphone. It's time to study.",11:"Clay, you've been late for school three times this week.",12:"M: Catherine, do you know how many hearts animals have?\nW: One, I think. Every animal has one heart.\nM: Wrong. An octopus has three hearts.\nW: How interesting! Where did you learn that?\nM: From a game show on TV.\nQuestion: What are the man and the woman talking about?",13:"W: Andy, have you finished your science report?\nM: I'm almost done. It will only take one more hour.\nW: You've worked on it for all the afternoon.\nM: I know, but I have to hand it in tomorrow.\nW: All right. After you finish it, come have dinner.\nM: OK, Mom.\nQuestion: What is true about Andy?",14:"M: Ashley, come up. It's beautiful up here.\nW: But I'm too short to climb up there.\nM: Give me your hand, and I'll pull you up.\nW: Oh, it hurts. You're pulling me too hard.\nM: Sorry. I'll pull you slowly, and you need to work harder to climb up.\nW: OK. Thanks.\nQuestion: What are the man and the woman doing?",15:"W: Jack, can you bring a bottle of milk and six eggs home when you get off work?\nM: No problem.\n(Pause for a while)\nM: Honey, I'm home. Here's what you asked for.\nW: Jack, what did you do? I need six eggs, not six bottles of milk.\nM: Oh no.\nQuestion: What is the matter with Jack?",16:"M: Let's try that new restaurant on the corner.\nW: Sure. What is the restaurant famous for?\nM: I've heard the fish is good.\nW: Good. I like fish. By the way, will we have to pay a lot?\nM: No. The dishes there are delicious and cheap.\nW: That's wonderful.\nQuestion: What is true about the woman?",17:"W: Terry, we're going camping this weekend. Would you like to join us?\nM: I've never camped before, so I don't know what to do.\nW: If you like nature, you can come with us and give it a try.\nM: What should I prepare for the trip?\nW: Nothing. You can use all our things. After arriving there, we'll show you what to do.\nM: Great! Count me in.\nQuestion: What can we learn from the dialogue?",18:"M: What do you feel like for dinner, noodles or burgers? I think we can find a good restaurant for those.\nW: I just came home, and I am too tired to move a finger.\nM: How about ordering something to eat at home?\nW: Sounds like a plan. What do you want?\nM: Pizza and a bowl of salad.\nW: Sure. I'll order them online, and you can pick up the order on the way home.\nQuestion: What are the man and the woman going to eat for dinner?",19:"W: When your eyes feel sore or dry too often, you might have dry eye problem. It happens not only to the old but also the young. Using computers or smartphones for a long time makes it worse. People can do something to stop or treat it. First, at home, you can cover your eyes with a warm and a little wet towel. Second, take more breaks when using a computer and close your eyes more often. Last, drink more water and get enough sleep. These three things will help keep your eyes healthy.\nQuestion: Which of the following is a tip for keeping your eyes healthy?",20:"M: Jane, why have you been so sad these few days?\nW: My favorite pet cat died, I got a bad grade, and then my parents were angry at me.\nM: You must be very unhappy.\nW: You're right, Andy. Sometimes I want to cry. I feel so terrible, but I know crying can't fix my problems.\nM: Go talk to your parents first, and then get some exercise. That will be good for you.\nW: Thank you, Andy.\nQuestion: What's wrong with Jane?",21:"W: Dad, did you take your medicine tonight?\nM: I remembered taking it.\nW: No. I found the medicine was still in the bag.\nM: Oh. I'm too old to remember so many things.\nW: Don't worry. I'll be there for you.\nM: Thanks, my sweetheart.\nQuestion: What is true about the man and the woman?"}},
+  {id:4,label:'第四回',audioFile:'listening4.mp3',totalQ:21,
+   answers:{1:'C',2:'C',3:'B',4:'B',5:'B',6:'A',7:'B',8:'A',9:'C',10:'C',11:'A',12:'B',13:'B',14:'A',15:'C',16:'B',17:'A',18:'C',19:'C',20:'A',21:'B'},
+   scripts:{1:"Both of the girls are eating a lot of food.",2:"Peter plays the violin before he watches TV.",3:"While Jack is walking, he is using his cellphone.",4:"I haven't seen Nicole for a few days.",5:"What do you do in your free time?",6:"Does your family usually eat at home?",7:"How do I look in this yellow skirt?",8:"Tony has a good knowledge of insects.",9:"Do you know when we will arrive in New York?",10:"What should you do if an earthquake happens?",11:"I'm not sure if the weather will be good today.",12:"M: Kelly? Are you Kelly Wilson?\nW: Yeah, I am. You are?\nM: I'm Jerry. Jerry Wang.\nW: Oh, Jerry. I haven't seen you since you left to study abroad. I think it's been ten years. How have you been?\nM: Not bad. And you?\nQuestion: What can we know from the dialogue?",13:"W: Which shirt do you like for your new job?\nM: The simpler, the better.\nW: How about this one with a pocket on the left?\nM: Not bad. I like that type.\nW: OK. It comes in 3 colors, white, black, and blue.\nM: I'll take the blue one. Blue is my lucky color.\nQuestion: Which shirt does the man pick?",14:"M: Why are there so many insects on the ground?\nW: Does it mean that there will be an earthquake?\nM: Why do you say that?\nW: Some studies show that a few insects and animals know when an earthquake will happen sooner than we do.\nM: You mean some insects may feel something is about to happen?\nW: That's right.\nQuestion: What can we learn from the dialogue?",15:"W: The dishes were all delicious, and I'm very full.\nM: Me, too. How much should we pay for the dinner?\nW: Oh, I forgot to bring my wallet. Lucas, could you lend me 500 dollars?\nM: No problem, but don't forget the one thousand dollars you borrowed the day before yesterday.\nW: Sure. I'll give it back to you tomorrow.\nQuestion: How much will the woman give back to the man?",16:"M: When talking about plants, people usually think of them as simple things which only need light and air. But not all the plants are so nice, and some of them are meat-eating plants. One of the most famous is the Venus flytrap. It waits with its bright red mouth open until an insect lands inside. When the insect tries to fly away, the mouth closes soon. That way, the poor insect is kept inside and never has a chance to get away.\nQuestion: What is true about the plants?",17:"W: Excuse me. Can you tell me how to get to GOGO Department Store?\nM: Taking a bus is convenient.\nW: What number bus goes there?\nM: Either 12 or 16 does.\nW: Then...where is the bus stop?\nM: It's just over there, across from the bank.\nW: Thanks.\nQuestion: What number bus should the woman NOT take?",18:"B: Let's play on the swing.\nG: Look, there are so many people in a long line.\nB: How about the seesaw? Nobody is playing on it.\nG: But I want to try the new slide. It's so tall!\nB: All right. I'll follow you.\nQuestion: What will the boy and the girl play on first?",19:"W: Excuse me. I would like to get my package.\nM: May I have the last three numbers of your phone number and your last name?\nW: 006 and Bush, B-U-S-H.\nM: Yes, we got your package. Please wait a minute.\nW: No problem.\nM: Here is your package.\nQuestion: Where may this dialogue take place?",20:"M: Nina, this is Michael. I'm sorry I can't have dinner with you tonight. A little boy will be sent to my workplace in five minutes. We all have to prepare well to treat him. After taking care of him, I will need to check on him once an hour to make sure he'll be OK. Sorry about this. I'll buy you dinner next time.\nQuestion: What is true about Michael?",21:"W: Rick, what are you going to do this weekend?\nM: I may just stay home and study.\nW: What do you think about going to the gym with me?\nM: What for?\nW: The fact is that I have a badminton game coming up, and I need someone to practice with me. So, can you come?\nM: Sure. I'll be glad to practice with you.\nQuestion: What can we learn from the dialogue?"}},
+  {id:5,label:'第五回',audioFile:'listening5.mp3',totalQ:21,
+   answers:{1:'B',2:'A',3:'B',4:'C',5:'A',6:'C',7:'B',8:'A',9:'B',10:'C',11:'C',12:'A',13:'A',14:'A',15:'C',16:'C',17:'B',18:'A',19:'B',20:'C',21:'A'},
+   scripts:{1:"Eunice has to hold her blanket, so she can sleep well.",2:"Frank is taller than Mark and thinner than Daniel.",3:"My apartment is across from the hospital and next to the bakery.",4:"What time is Mia's Birthday party?",5:"The earthquake this time is serious. Many people go there to help clean the place.",6:"I can't find my wallet. Do you know where it is?",7:"Mom wants to make a cake. How much sugar does she need?",8:"I like this beautiful lamp a lot. How much is it?",9:"Which pair of jeans do you like more?",10:"Have you decided where to fly this winter vacation?",11:"Knowledge is power. So we have to spend more time reading different types of books.",12:"B: Lily, you look sad. What's wrong?\nG: I fell yesterday and hurt my right knee and toes.\nB: Oh no! Did you hurt your knee hard?\nG: Yeah, and some of my nails are even broken!\nB: Poor you. You should rest more.\nQuestion: Which part of Lily is NOT hurt?",13:"W: Hey Ben, look, there's an umbrella on the bench.\nM: Hmmm, whose umbrella is this?\nW: I'm not sure. It's blue and yellow.\nM: Those are my favorite colors. Maybe it's mine?\nW: I know Ms. Lin also like the 2 colors. Maybe it's hers. Please take a closer look.\nM: Hahaha. I remember I left it here yesterday.\nQuestion: Who owns the umbrella?",14:"M: Why are you talking so quietly?\nW: Shh, we are sitting in the quiet car on the metro.\nM: Oh, I didn't see the sign. I'm talking too loudly.\nW: Oh my god. Our baby is crying too loud!\nM: Don't worry. She is a baby, and it's common for her to cry. Maybe she's hungry now.\nW: Let's give her milk and calm her down.\nQuestion: Why is the baby crying?",15:"W: Brian, why are you sitting on the floor?\nB: Mom. Math is too difficult for me.\nW: Is it because you did terribly on the test yesterday?\nB: Yes, and I didn't understand any of them.\nW: I will find you a helper. Pick yourself up from where you've fallen. Everyone can start again. Let's find some ways.\nQuestion: What does the woman mean by saying \"Pick yourself up from where you've fallen\"?",16:"W: Ben, what time is it now?\nM: It's a quarter to seven. Why?\nW: Oh no! The movie starts in ten minutes!\nM: Then we are almost late! Where's Tammy?\nW: She said she'd be here at six thirty.\nM: Oh she's late again. Let's get everything we need and call her!\nQuestion: What time is the movie?",17:"W: Guess what? I talked to the king in person yesterday!\nM: Wow! How can you do that?\nW: He visited our school for a talk, and I listed some questions to ask him. I have never met someone so famous in my life.\nM: You're so lucky! If you keep doing it, maybe you will fly abroad to interview someone else!\nQuestion: What's the woman's job?",18:"M: How do you like your steak?\nW: I like it medium. I don't like it too hard.\nM: I also have a medium one, and I think it's yummy. I also like the side dish, the potato. What do you get?\nW: Fries and salad. They are so good that my pants become too small now…\nM: Hahaha. Let's come here next time to try something else!\nQuestion: Which is true about the talk?",19:"B: Mom, do you know who the woman is over there?\nW: Do you mean the one in a red dress?\nB: Yes. She's talking to Dad now.\nW: Oh, I think she is one of your five aunts. She is the one that lives in the USA. That's why you have never seen her before.\nB: Wow, she's so young. I thought she is our cousin. Haha.\nQuestion: Which relative is the woman they are talking about?",20:"M: Your scooter has been fixed and is ready to use. You should ride it carefully for the first few days. If you hear any strange sounds, please bring it back to the shop to keep it safe. Don't forget to come back and check the scooter every two months. This can keep your scooter in good use for a longer time. Thank you!\nQuestion: Where is the man?",21:"Dear parents,\nWelcome to Parents' Day tonight! It will start from 6:30 to 8:30 p.m. A talk about high school will be held on the third floor at 7 pm. After the talk, you can meet your homeroom teacher in their classroom for further talk. We also prepare some free snack in Room 201. Feel free to get something to eat before the talk! Hope you enjoy tonight.\nQuestion: What is the man telling people?"}},
+  {id:6,label:'第六回',audioFile:'listening6.mp3',totalQ:21,
+   answers:{1:'A',2:'B',3:'C',4:'A',5:'B',6:'C',7:'B',8:'B',9:'B',10:'A',11:'C',12:'A',13:'C',14:'A',15:'C',16:'A',17:'A',18:'C',19:'A',20:'B',21:'A'},
+   scripts:{1:"How strange! The zebra is playing with the hen on the farm.",2:"Don't you have to wear the uniform to school? Can you dress like this?",3:"The postcard is going to be sent to Kevin in Sunny Town from Italy.",4:"How can you go to the new café without me?",5:"This is the first time I heard her voice. She has a low voice.",6:"I haven't talked my parents into doing health check yet.",7:"Let's toast! Your report is the best in class this time!",8:"I would like to surf in the sea, not just swim here.",9:"How often did you fight with your brother when you were little?",10:"What a terrible experience! How could this happen to you?",11:"Please pin this piece of notice on the board for me.",12:"M: Hey Annie, look at this bow. It's so pretty.\nW: Yeah! I like the red one. Which color do you like?\nM: Hmmm, perhaps the blue one. To buy this on the Net cost more. It's expensive to me.\nW: Maybe another shop near the park has something cheaper?\nM: I can take both colors if they have better price.\nW: Let's go check!\nQuestion: Where are they going to do next?",13:"W: Welcome! Which noodles would you like to order today?\nM: Which one is made with beef?\nW: Number one is beef noodles, and it goes with tomatoes.\nM: Is it with more salt or more sugar? I don't like it too sweet.\nW: I believe it tastes in between. Many people come here for it.\nM: Okay. Please give me a pork noodle with some vegetables but not tomatoes. Thanks.\nQuestion: What did the man have for dinner today?",14:"W: Henry, did you enjoy visiting there yesterday?\nM: Yes! Many stamps were shown. They are so beautiful.\nW: Really? I thought they sold stamps and postcards only.\nM: Nono. The woman is interested in collecting stamps and she has collected stamps for more than five years. The front desk sells some books about her story.\nW: Maybe I should go there someday.\nQuestion: Where did the man go yesterday?",15:"M: Annabelle, what are you doing?\nW: I'm writing my science report. The teacher is so serious that everyone is afraid.\nM: Wow, you're working hard. Are you presenting it on the stage tomorrow?\nW: Yes, and I am the first one to go up! I'm knocking on wood now!\nM: Hahaha! I will cheer for you on my seat. You will be great!\nW: Thanks, Kenny. I will try my best to practice and do it well tomorrow! Have a good night.\nQuestion: What does it mean when the woman says \"I'm knocking on wood\"?",16:"B: How was the show last night?\nG: It was wonderful! It's the band's best show ever.\nB: Who was the most popular singer in the band?\nG: Ryan Bank, my favorite one. He sang the most beautifully of all. And he is so handsome that no one can take eyes off him. I love him so much and I touched his hands yesterday!\nB: Okay okay. Don't forget your boyfriend is still me, not him.\nQuestion: Which is true about the girl?",17:"W: Oh no, how come the clothes are still dirty? What happened, son?\nB: Rrrr. I think just used the dishwasher to wash the clothes…….\nW: What?? How could you make this kind of mistake?\nB: I am sorry, Mom. The buttons look the same to me.\nW: You must check before you push the buttons. This dishwasher is for plates and bowls. That one is washing machine!\nB: Yes sir! I won't do it wrong again!\nQuestion: What did the boy do?",18:"M: Hey, honey. I have a serious problem.\nW: What happen?\nM: Can you teach me how to open up the can? I want to open it, but I can't.\nW: Oh you need special ways to open it. First, you use your left hand to take it.\nM: Okay. Can I use my right hand?\nW: No, use your left hand. Second, use you right hand to pull the top.\nM: Ummm, wait. There is nothing special!\nW: Yes. I believe you just didn't pull it hard enough.\nM: You are a big help. Hahahah.\nQuestion: What is true about the man and the woman?",19:"B: Your Christmas party last night looked great. Lights, music, and snacks are nice in your video.\nG: Ummmm. But in fact, I like your party more. You had great drinks, pizza, and you changed presents with each other.\nB: Ummmm. But I got a doll which I really don't need. Or, do you want it? Actually, I want to join a party with great music as yours.\nG: Cool! I can take your doll as Christmas gift and I can play the songs from yesterday for you!\nB: Deal! Then we can all have a better Christmas!\nQuestion: Do the boy and the girl like their own parties?",20:"W: Hello everyone! We will close in twenty minutes. If you want to take a quick shower, please watch out the time. Remember to take everything you brought today with you. Don't forget your water bottles, towels, and bags. We hope you have a good time exercising with us here today. We are open for you every day from 7 in the morning to 11 at night. See you next time. Stay strong and healthy!\nQuestion: Where can you hear this?",21:"W: Where are they going?\nM: I think they want to play water in the sea.\nW: Come on. Don't they see the sign there?\nM: You mean a black triangle with some waves beside it? I believe they saw it at the beach, but they may not know the meaning of it. What does it mean?\nW: Hello?! Are you the same like them? There are some words below! \"Be careful of deep water!\"\nM: Let's stop them!\nQuestion: What does the woman want the man to understand?"}}
+];
 
-const scripts = {
-  1: "Both of the girls are eating a lot of food.",
-  2: "Peter plays the violin before he watches TV.",
-  3: "While Jack is walking, he is using his cellphone.",
-  4: "I haven't seen Nicole for a few days.",
-  5: "What do you do in your free time?",
-  6: "Does your family usually eat at home?",
-  7: "How do I look in this yellow skirt?",
-  8: "Tony has a good knowledge of insects.",
-  9: "Do you know when we will arrive in New York?",
-  10: "What should you do if an earthquake happened?",
-  11: "I'm not sure if the weather will be good today.",
-  12: `M: Kelly? Are you Kelly Wilson?
-W: Yeah, I am. You are?
-M: I'm Jerry. Jerry Wang.
-W: Oh, Jerry. I haven't seen you since you left to study abroad. I think it's been ten years. How have you been?
-M: Not bad. And you?
-Question: What can we know from the dialogue?`,
-  13: `W: Which shirt do you like for your new job?
-M: The simpler, the better.
-W: How about this one with a pocket on the left?
-M: Not bad. I like that type.
-W: OK. It comes in 3 colors, white, black, and blue.
-M: I'll take the blue one. Blue is my lucky color.
-Question: Which shirt does the man pick?`,
-  14: `M: Why are there so many insects on the ground?
-W: Does it mean that there will be an earthquake?
-M: Why do you say that?
-W: Some studies show that a few insects and animals know when an earthquake will happen sooner than we do.
-M: You mean some insects may feel something is about to happen?
-W: That's right.
-Question: What can we learn from the dialogue?`,
-  15: `W: The dishes were all delicious, and I'm very full.
-M: Me, too. How much should we pay for the dinner?
-W: Oh, I forgot to bring my wallet. Lucas, could you lend me 500 dollars?
-M: No problem, but don't forget the one thousand dollars you borrowed the day before yesterday.
-W: Sure. I'll give it back to you tomorrow.
-Question: How much will the woman give back to the man?`,
-  16: `M: When talking about plants, people usually think of them as simple things which only need light and air. But not all the plants are so nice, and some of them are meat-eating plants. One of the most famous is the Venus flytrap. It waits with its bright red mouth open until an insect lands inside. When the insect tries to fly away, the mouth closes soon. That way, the poor insect is kept inside and never has a chance to get away.
-Question: What is true about the plants?`,
-  17: `W: Excuse me. Can you tell me how to get to GOGO Department Store?
-M: Taking a bus is convenient.
-W: What number bus goes there?
-M: Either 12 or 16 does.
-W: Then...where is the bus stop?
-M: It's just over there, across from the bank.
-W: Thanks.
-Question: What number bus should the woman NOT take?`,
-  18: `B: Let's play on the swing.
-G: Look, there are so many people in a long line.
-B: How about the seesaw? Nobody is playing on it.
-G: But I want to try the new slide. It's so tall!
-B: All right. I'll follow you.
-Question: What will the boy and the girl play on first?`,
-  19: `W: Excuse me. I would like to get my package.
-M: May I have the last three numbers of your phone number and your last name?
-W: 006 and Bush, B-U-S-H.
-M: Yes, we got your package. Please wait a minute.
-W: No problem.
-M: Here is your package.
-Question: Where may this dialogue take place?`,
-  20: `M: Nina, this is Michael. I'm sorry I can't have dinner with you tonight. A little boy will be sent to my workplace in five minutes. We all have to prepare well to treat him. After taking care of him, I will need to check on him once an hour to make sure he'll be OK. Sorry about this. I'll buy you dinner next time.
-Question: What is true about Michael?`,
-  21: `W: Rick, what are you going to do this weekend?
-M: I may just stay home and study.
-W: What do you think about going to the gym with me?
-M: What for?
-W: The fact is that I have a badminton game coming up, and I need someone to practice with me. So, can you come?
-M: Sure. I'll be glad to practice with you.
-Question: What can we learn from the dialogue?`
-};
+let currentUnit=null,audioShown=false,answersShown=false,analysisShown=false;
 
-// Build answers grid
-function buildAnswersGrid() {
-  const grid = document.getElementById('answersGrid');
-  if (grid.children.length > 0) return;
-  for (let i = 1; i <= 21; i++) {
-    const cell = document.createElement('div');
-    cell.className = 'answer-cell';
-    cell.innerHTML = `<div class="answer-num">第 ${i} 題</div><div class="answer-val">${answers[i]}</div>`;
+function buildSelector(){
+  const grid=document.getElementById('unitsGrid');
+  UNITS.forEach(u=>{
+    const card=document.createElement('div');
+    card.className='unit-card';
+    card.innerHTML=`<div class="unit-num">${u.id}</div><div class="unit-name">${u.label}</div><div class="unit-badge">共 ${u.totalQ} 題</div>`;
+    card.onclick=()=>openUnit(u);
+    grid.appendChild(card);
+  });
+}
+
+function openUnit(unit){
+  currentUnit=unit;
+  audioShown=false;answersShown=false;analysisShown=false;
+  document.getElementById('audioBtnText').textContent='點我聽聽力';
+  document.getElementById('audioWrapper').classList.remove('visible');
+  document.getElementById('audioPlayer').pause();
+  document.getElementById('audioPlayer').src=unit.audioFile;
+  document.getElementById('answersWrapper').classList.remove('visible');
+  document.getElementById('answersGrid').innerHTML='';
+  document.getElementById('analysisWrapper').classList.remove('visible');
+  resetQuery();
+  document.getElementById('practiceUnitTitle').textContent=unit.label;
+  document.getElementById('answersTitle').textContent=`▎ ${unit.label}答案`;
+  document.getElementById('selectorCard').style.display='none';
+  document.getElementById('practiceCard').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goBack(){
+  document.getElementById('audioPlayer').pause();
+  document.getElementById('practiceCard').style.display='none';
+  document.getElementById('selectorCard').style.display='block';
+  currentUnit=null;
+}
+
+function toggleAudio(){
+  audioShown=!audioShown;
+  document.getElementById('audioWrapper').classList.toggle('visible',audioShown);
+  document.getElementById('audioBtnText').textContent=audioShown?'收起音檔':'點我聽聽力';
+  if(!audioShown)document.getElementById('audioPlayer').pause();
+}
+
+function showAnswers(){
+  if(answersShown)return;
+  const grid=document.getElementById('answersGrid');
+  for(let i=1;i<=currentUnit.totalQ;i++){
+    const cell=document.createElement('div');
+    cell.className='answer-cell';
+    cell.innerHTML=`<div class="answer-num">第 ${i} 題</div><div class="answer-val">${currentUnit.answers[i]}</div>`;
     grid.appendChild(cell);
   }
+  document.getElementById('answersWrapper').classList.add('visible');
+  answersShown=true;
 }
 
-// Step 1
-let audioShown = false;
-function toggleAudio() {
-  audioShown = !audioShown;
-  const wrapper = document.getElementById('audioWrapper');
-  const btn = document.getElementById('audioBtn');
-  if (audioShown) {
-    wrapper.classList.add('visible');
-    btn.textContent = '收起音檔';
-  } else {
-    wrapper.classList.remove('visible');
-    btn.textContent = '點我聽聽力';
-    document.getElementById('audioPlayer').pause();
-  }
+function showAnalysis(){
+  if(analysisShown)return;
+  document.getElementById('analysisWrapper').classList.add('visible');
+  analysisShown=true;
 }
 
-// Step 2
-let answersShown = false;
-function showAnswers() {
-  if (!answersShown) {
-    buildAnswersGrid();
-    document.getElementById('answersWrapper').classList.add('visible');
-    answersShown = true;
+function lookupAnalysis(){
+  const u=currentUnit;
+  const raw=document.getElementById('queryInput').value.trim();
+  const errEl=document.getElementById('errorMsg');
+  errEl.style.display='none';
+  if(!raw){errEl.textContent='請輸入題號。';errEl.style.display='block';return;}
+  const parts=raw.split(/[,，\s]+/).filter(Boolean);
+  const nums=[];
+  for(const p of parts){
+    const n=parseInt(p,10);
+    if(isNaN(n)||n<1||n>u.totalQ){errEl.textContent=`請輸入 1 到 ${u.totalQ} 之間的有效題號。`;errEl.style.display='block';return;}
+    if(!nums.includes(n))nums.push(n);
   }
-}
-
-// Step 3
-let analysisShown = false;
-function showAnalysis() {
-  if (!analysisShown) {
-    document.getElementById('analysisWrapper').classList.add('visible');
-    analysisShown = true;
-  }
-}
-
-function lookupAnalysis() {
-  const raw = document.getElementById('queryInput').value.trim();
-  const errEl = document.getElementById('errorMsg');
-  errEl.style.display = 'none';
-
-  if (!raw) {
-    errEl.textContent = '請輸入題號。';
-    errEl.style.display = 'block';
-    return;
-  }
-
-  const parts = raw.split(/[,，\s]+/).filter(Boolean);
-  const nums = [];
-  let invalid = false;
-
-  for (const p of parts) {
-    const n = parseInt(p, 10);
-    if (isNaN(n) || n < 1 || n > 21) { invalid = true; break; }
-    if (!nums.includes(n)) nums.push(n);
-  }
-
-  if (invalid) {
-    errEl.textContent = '請輸入 1 到 21 之間的有效題號。';
-    errEl.style.display = 'block';
-    return;
-  }
-
-  if (nums.length > 5) {
-    errEl.textContent = `一次最多查詢 5 題，您輸入了 ${nums.length} 題，請減少題數。`;
-    errEl.style.display = 'block';
-    return;
-  }
-
-  // Render results
-  const area = document.getElementById('resultsArea');
-  area.innerHTML = '';
-  nums.sort((a, b) => a - b);
-
-  for (const n of nums) {
-    const card = document.createElement('div');
-    card.className = 'result-card';
-    card.innerHTML = `
-      <div class="result-header">
-        <span class="result-num-badge">第 ${n} 題</span>
-        <span class="result-answer-badge">答案：${answers[n]}</span>
-      </div>
-      <p class="result-script-label">▎ 聽力稿</p>
-      <p class="result-script">${scripts[n]}</p>
-    `;
+  if(nums.length>5){errEl.textContent=`一次最多查詢 5 題，您輸入了 ${nums.length} 題，請減少題數。`;errEl.style.display='block';return;}
+  const area=document.getElementById('resultsArea');
+  area.innerHTML='';
+  nums.sort((a,b)=>a-b);
+  nums.forEach(n=>{
+    const card=document.createElement('div');
+    card.className='result-card';
+    card.innerHTML=`<div class="result-header"><span class="result-num-badge">第 ${n} 題</span><span class="result-answer-badge">答案：${u.answers[n]}</span></div><p class="result-script-label">▎ 聽力稿</p><p class="result-script">${u.scripts[n]}</p>`;
     area.appendChild(card);
-  }
-
+  });
   area.classList.add('visible');
   document.getElementById('resetBtn').classList.add('visible');
-  document.getElementById('queryInput').disabled = true;
-  document.querySelector('.btn-query').disabled = true;
-  document.querySelector('.btn-query').style.opacity = '0.4';
+  document.getElementById('queryInput').disabled=true;
+  document.querySelector('.btn-query').disabled=true;
+  document.querySelector('.btn-query').style.opacity='0.4';
 }
 
-function resetQuery() {
-  document.getElementById('queryInput').value = '';
-  document.getElementById('queryInput').disabled = false;
-  document.querySelector('.btn-query').disabled = false;
-  document.querySelector('.btn-query').style.opacity = '1';
-  document.getElementById('resultsArea').classList.remove('visible');
-  document.getElementById('resultsArea').innerHTML = '';
-  document.getElementById('resetBtn').classList.remove('visible');
-  document.getElementById('errorMsg').style.display = 'none';
+function resetQuery(){
+  const qi=document.getElementById('queryInput');
+  if(qi){qi.value='';qi.disabled=false;}
+  const bq=document.querySelector('.btn-query');
+  if(bq){bq.disabled=false;bq.style.opacity='1';}
+  const ra=document.getElementById('resultsArea');
+  if(ra){ra.classList.remove('visible');ra.innerHTML='';}
+  const rb=document.getElementById('resetBtn');
+  if(rb)rb.classList.remove('visible');
+  const em=document.getElementById('errorMsg');
+  if(em)em.style.display='none';
 }
+
+buildSelector();
 </script>
 </body>
 </html>
